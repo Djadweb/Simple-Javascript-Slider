@@ -1,0 +1,28 @@
+<script>
+
+var i=0;    
+var image = [];
+
+
+image[0] = "image0.jpeg";
+image[1] = "image1.jpeg";
+image[2] = "image2.jpeg";
+image[3] = "image3.jpeg";
+
+function imageSlider() {
+    document.slide.src = image[i];
+    if(i < image.length - 1) {
+        i++;
+    } else {
+        i=0;
+    }
+
+    setTimeout("imageSlider()", 3000);
+}
+
+window.onload = imageSlider;
+
+</script>
+
+
+<img name="slide" style="height: 200px;width: 450px;">
